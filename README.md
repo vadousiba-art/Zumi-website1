@@ -62,3 +62,7 @@ With the preview server running (`npm run build && npm run preview`):
 CHROMIUM_PATH=/path/to/chromium npm run check:visual        # desktop + mobile screenshots, overflow + console check
 CHROMIUM_PATH=/path/to/chromium npm run check:interactions  # drives every control end-to-end
 ```
+
+## Deploy
+
+Every push to `main` builds and publishes the site to GitHub Pages via `.github/workflows/deploy.yml` (it can also be run manually from the Actions tab). The workflow passes the Pages base path to Vite through `BASE_PATH`, so the site lives at `https://vadousiba-art.github.io/Zumi-website1/`. If the first run can't enable Pages on its own, set **Settings → Pages → Source** to **GitHub Actions** and re-run it.
